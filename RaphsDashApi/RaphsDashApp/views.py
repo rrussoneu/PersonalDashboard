@@ -11,7 +11,7 @@ ToDoSerializer, ContactSerializer)
 from .models import (RecurrenceRule, Profile, Event, ToDo, Contact)
 
 class CustomUserViewSet(viewsets.ModelViewSet):
-    queryset = get_user_model.objects.all()
+    queryset = get_user_model().objects.all()
     serializer_class = CustomUserSerializer
     
 

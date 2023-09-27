@@ -31,7 +31,7 @@ const Login = () => {
     e.preventDefault();
     //localStorage.setItem("userId", 1);
     //navigate(from, { replace: true });
-    
+
     try {
       const response = await axios.post(
         LOGIN_URL,
@@ -46,8 +46,8 @@ const Login = () => {
       const accessToken = response?.data?.token;
       const userId = response?.data?.id;
       //setAuth({ userId, accessToken });
-      localStorage.setItem("userId", userId)
-      localStorage.setItem("accessToken", accessToken)
+      localStorage.setItem("userId", userId);
+      localStorage.setItem("accessToken", accessToken);
 
       setUser("");
       setPwd("");
@@ -65,7 +65,6 @@ const Login = () => {
       }
       errRef.current.focus();
     }
-    
   };
   /*
   const togglePersist = () => {

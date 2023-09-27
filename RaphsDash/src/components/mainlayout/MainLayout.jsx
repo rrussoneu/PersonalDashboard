@@ -1,7 +1,9 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
-//import Home from "../../pages/Home";
+import Home from "../../pages/Home";
 import "./mainlayout.scss";
+import Navbar from "../navbar/Navbar";
+import Sidebar from "../sidebar/Sidebar";
 
 function MainLayout() {
   return (
@@ -12,6 +14,7 @@ function MainLayout() {
 
 
           <Routes>
+          <Route path="home" element={<Home></Home>}></Route>
           </Routes>
         
       </div>

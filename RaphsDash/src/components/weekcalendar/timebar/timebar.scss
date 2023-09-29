@@ -1,0 +1,9 @@
+.timeBar {
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    height: 4px;
+    background-color: gold;
+    z-index: 300;
+    width: 12.5%;
+}

@@ -1,0 +1,18 @@
+.weekEventCard {
+    //margin-left: 35%;
+    background-color: rgb(30, 207, 30);
+    position: absolute;
+    z-index: 200;
+    border-radius: 10px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    width: 12.5%;
+  
+    .eventDataWrapper {
+      padding: 10px;
+      display: flex;
+      flex-direction: column;
+    }
+  }
+  

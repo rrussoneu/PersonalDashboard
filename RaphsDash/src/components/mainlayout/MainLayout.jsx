@@ -1,6 +1,7 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
 import Home from "../../pages/Home";
+import Calendar from "../../pages/Calendar";
 import "./mainlayout.scss";
 import Navbar from "../navbar/Navbar";
 import Sidebar from "../sidebar/Sidebar";
@@ -15,6 +16,7 @@ function MainLayout() {
 
           <Routes>
           <Route path="home" element={<Home></Home>}></Route>
+          <Route path="calendar" element={<Calendar></Calendar>}></Route>
           </Routes>
         
       </div>

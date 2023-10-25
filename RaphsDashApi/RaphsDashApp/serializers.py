@@ -39,10 +39,12 @@ class ContactSerializer(serializers.ModelSerializer):
 
 
 class CustomUserSerializer(serializers.ModelSerializer):
+    password = serializers.CharField(write_only=True, required=True)
+
     class Meta:
         model = get_user_model()    # use this and not just CustomUser to 
                                     #decouple from the user model, avoid circular imports, and get the auth_user_model setting user
-        fields = ('id', 'email', 'first_name', 'last_name', 'date_joined')
+        fields = ('id', 'email', 'first_name', 'last_name', 'date_joined', 'password')
     
     # Delegate creation to the CustomUserManager
     def create(self, validated_data):

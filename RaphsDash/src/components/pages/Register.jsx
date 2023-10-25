@@ -29,7 +29,7 @@ const USER_REGEX =
   /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
 // basic password regex for chars, nums
 const PWD_REGEX = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%]).{8,24}$/;
-const REGISTER_URL = "/TabInApp/users/";
+const REGISTER_URL = "PersonalDashApp/users/";
 
 const Register = () => {
   // focus on user input
@@ -139,7 +139,7 @@ const Register = () => {
         <section className="on-success">
           <h1>Success!</h1>
           <p>
-            <a href="#">Sign In</a>
+          <Link to="/login">Sign Up</Link>
           </p>
         </section>
       ) : (

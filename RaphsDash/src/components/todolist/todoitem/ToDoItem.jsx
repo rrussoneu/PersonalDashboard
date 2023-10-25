@@ -1,4 +1,5 @@
 import { Button } from "@mui/material";
+import dayjs from "dayjs";
 import React from "react";
 import { useState } from "react";
 import axios from "../../../api/axios";
@@ -15,7 +16,7 @@ function ToDoItem(props) {
   const handleComplete = () => {
     setIsComplete(true);
     setShouldDisplay("none");
-    axios.delete(`PersonalDashApp/todos/${toDoObj.id}`);
+    //axios.delete(`PersonalDashApp/todos/${toDoObj.id}`);
 
     try {
       const response = axios({

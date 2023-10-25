@@ -78,10 +78,11 @@ class ToDoViewSet(viewsets.ModelViewSet):
         date = self.request.query_params.get('date')
         owner = self.request.query_params.get('owner')
 
-        if date:
-            queryset = queryset.filter(date=date)  
         if date == "":
                     queryset = queryset.filter(date__isnull=True)
+        elif date:
+            queryset = queryset.filter(date=date)  
+        
         if owner:
             queryset = queryset.filter(owner=owner)
         return queryset

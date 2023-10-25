@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./newtodo.scss";
 import axios from "../../../api/axios";
+import dayjs from "dayjs";
 
 const TODO_URL = "PersonalDashApp/todos/";
 
@@ -20,7 +21,7 @@ function NewToDo() {
           title: title,
           notes: notes,
           complete: false,
-          date: null,
+          date: dayjs().format("YYYY-MM-DD"),
         }),
         {
           headers: {

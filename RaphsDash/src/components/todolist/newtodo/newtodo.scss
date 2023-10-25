@@ -1,0 +1,35 @@
+.createToDo {
+    display: flex;
+    flex-direction: column;
+    .createField {
+      display: flex;
+      flex-direction: row;
+      padding: 10px;
+      .createLabel {
+        padding: 10px;
+      }
+      .createInput {
+        border-radius: 10px;
+        border: 0.5px solid lightgrey;
+      }
+    }
+    .buttonDiv {
+      display: flex;
+      justify-content: right;
+      width: 100%;
+      .createButton {
+        background-color: white;
+        padding: 15px;
+        margin: 10px;
+        color: black;
+        width: 30%;
+        border: 2px solid rebeccapurple;
+        border-radius: 5px;
+      }
+      .createButton:hover {
+        background-color: rebeccapurple; /* Green */
+        color: white;
+      }
+    }
+  }
+  

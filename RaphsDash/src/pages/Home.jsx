@@ -1,6 +1,9 @@
 import React from "react";
 import Widget from "../components/widget/Widget";
 import "../pagescss/home.scss";
+import ToDoList from "../components/todolist/ToDoList";
+import DailySchedule from "../components/dailyschedule/DailySchedule";
+import Featured from "../components/featured/Featured";
 
 const Home = () => {
   return (
@@ -12,7 +15,11 @@ const Home = () => {
           <Widget type="earnings" />
           <Widget type="balance" />
         </div>
-        <div className="charts"></div>
+        <div className="charts">
+          <DailySchedule />
+          <ToDoList />
+          <Featured />
+        </div>
       </div>
     </div>
   );

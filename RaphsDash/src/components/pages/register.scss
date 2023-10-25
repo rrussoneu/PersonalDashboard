@@ -1,0 +1,84 @@
+.register-main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: 100vh;
+  .register-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 5vw;
+    border: 2px solid rebeccapurple;
+    border-radius: 5px;
+    .register-form {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: left;
+      width: 15vw;
+      .register-form-section {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: left;
+        padding-bottom: 1vh;
+        .instructions {
+          font-size: 0.75rem;
+          border-radius: 0.5rem;
+          background: #000;
+          color: #fff;
+          padding: 0.25rem;
+          position: relative;
+          bottom: -10px;
+        }
+
+        .instructions > svg {
+          margin-right: 0.25rem;
+        }
+
+        .offscreen {
+          position: absolute;
+          left: -9999px;
+        }
+
+        .register-field-title {
+          .hide {
+            display: none;
+          }
+
+          .valid {
+            color: limegreen;
+            margin-left: 0.25rem;
+          }
+
+          .invalid {
+            color: red;
+            margin-left: 0.25rem;
+          }
+        }
+        .hide {
+          display: none;
+        }
+
+        .valid {
+          color: limegreen;
+          margin-left: 0.25rem;
+        }
+
+        .invalid {
+          color: red;
+          margin-left: 0.25rem;
+        }
+
+        .errmsg {
+          background-color: lightpink;
+          color: firebrick;
+          font-weight: bold;
+          padding: 0.5rem;
+          margin-bottom: 0.5rem;
+        }
+      }
+    }
+  }
+}

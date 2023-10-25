@@ -42,11 +42,13 @@ const Login = () => {
           //withCredentials: true
         }
       );
-      //console.log(JSON.stringify(response?.data));
+      console.log(JSON.stringify(response?.data));
       //console.log(JSON.stringify(response));
       const accessToken = response?.data?.token;
       const userId = response?.data?.id;
       //setAuth({ userId, accessToken });
+      console.log(accessToken);
+      console.log(userId);
       localStorage.setItem("userId", userId);
       localStorage.setItem("accessToken", accessToken);
 

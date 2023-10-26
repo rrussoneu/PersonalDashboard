@@ -7,10 +7,13 @@ import AccountBoxIcon from "@mui/icons-material/AccountBox";
 import LogoutIcon from "@mui/icons-material/Logout";
 import SettingsIcon from "@mui/icons-material/Settings";
 import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 function Sidebar() {
+  const navigate = useNavigate();
   const handleLogout = () => {
     localStorage.clear();
+    navigate("/login");
   };
 
   return (
@@ -58,7 +61,7 @@ function Sidebar() {
           </li>
           <li>
             <LogoutIcon className="icon" />
-            <span onClick={handleLogout}>LogOut</span>
+            <span onClick={handleLogout}>Log Out</span>
           </li>
         </ul>
       </div>

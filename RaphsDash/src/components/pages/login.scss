@@ -1,0 +1,24 @@
+.center-login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: 100vh;
+  .login-main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 5vw;
+    border: 2px solid rebeccapurple;
+    border-radius: 5px;
+    .login-form {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: left;
+      .login-form-item {
+        padding-bottom: 2vh;
+      }
+    }
+  }
+}

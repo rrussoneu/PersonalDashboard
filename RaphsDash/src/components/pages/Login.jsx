@@ -3,6 +3,7 @@ import { useRef, useState, useEffect } from "react";
 import axios from "../../api/axios";
 const LOGIN_URL = "/auth/";
 import { Link, useNavigate, useLocation } from "react-router-dom";
+import "./login.scss";
 
 const Login = () => {
   //const { setAuth, persist, setPersist } = useAuth();
@@ -41,11 +42,13 @@ const Login = () => {
           //withCredentials: true
         }
       );
-      //console.log(JSON.stringify(response?.data));
+      console.log(JSON.stringify(response?.data));
       //console.log(JSON.stringify(response));
       const accessToken = response?.data?.token;
       const userId = response?.data?.id;
       //setAuth({ userId, accessToken });
+      console.log(accessToken);
+      console.log(userId);
       localStorage.setItem("userId", userId);
       localStorage.setItem("accessToken", accessToken);
 
@@ -76,7 +79,7 @@ const Login = () => {
   }, [persist]);
 */
   return (
-    <section>
+    <section className="center-login">
       <p
         ref={errRef}
         className={errMsg ? "errmsg" : "offscreen"}
@@ -84,29 +87,37 @@ const Login = () => {
       >
         {errMsg}
       </p>
-      <h1>Sign In</h1>
-      <form onSubmit={handleSubmit}>
-        <label htmlFor="username">Username/ Email:</label>
-        <input
-          type="text"
-          id="username"
-          ref={userRef}
-          autoComplete="off"
-          onChange={(e) => setUser(e.target.value)}
-          value={user}
-          required
-        />
+      <div className="login-main">
+        <h1>Sign In</h1>
+        <form onSubmit={handleSubmit} className="login-form">
+          <div className="login-form-item">
+            <label htmlFor="username">Username/ Email:</label>
+            <input
+              type="text"
+              id="username"
+              ref={userRef}
+              autoComplete="off"
+              onChange={(e) => setUser(e.target.value)}
+              value={user}
+              required
+            />
+          </div>
+          <div className="login-form-item">
+            <label htmlFor="password">Password:</label>
+            <input
+              type="password"
+              id="password"
+              onChange={(e) => setPwd(e.target.value)}
+              value={pwd}
+              required
+            />
+          </div>
 
-        <label htmlFor="password">Password:</label>
-        <input
-          type="password"
-          id="password"
-          onChange={(e) => setPwd(e.target.value)}
-          value={pwd}
-          required
-        />
-        <button>Sign In</button>
-        {/**<div className="persistCheck">
+          <div className="login-form-item">
+            <button>Sign In</button>
+          </div>
+
+          {/**<div className="persistCheck">
           <input
             type="checkbox"
             id="persist"
@@ -115,15 +126,16 @@ const Login = () => {
           />
           <label htmlFor="persist">Trust This Device</label>
         </div> */}
-      </form>
-      <p>
-        Need an Account?
-        <br />
-        <span className="line">
-          {/*put router link here*/}
-          <Link to="/register">Sign Up</Link>
-        </span>
-      </p>
+        </form>
+        <p>
+          Need an Account?
+          <br />
+          <span className="line">
+            {/*put router link here*/}
+            <Link to="/register">Sign Up</Link>
+          </span>
+        </p>
+      </div>
     </section>
   );
 };

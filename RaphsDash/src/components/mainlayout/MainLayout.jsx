@@ -5,6 +5,7 @@ import Calendar from "../../pages/Calendar";
 import "./mainlayout.scss";
 import Navbar from "../navbar/Navbar";
 import Sidebar from "../sidebar/Sidebar";
+import Contacts from "../../pages/Contacts";
 
 function MainLayout() {
   return (
@@ -17,6 +18,7 @@ function MainLayout() {
           <Routes>
           <Route path="home" element={<Home></Home>}></Route>
           <Route path="calendar" element={<Calendar></Calendar>}></Route>
+          <Route path="contacts" element={<Contacts/>}/>
           </Routes>
         
       </div>

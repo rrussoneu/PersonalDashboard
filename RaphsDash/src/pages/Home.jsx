@@ -3,7 +3,8 @@ import Widget from "../components/widget/Widget";
 import "../pagescss/home.scss";
 import ToDoList from "../components/todolist/ToDoList";
 import DailySchedule from "../components/dailyschedule/DailySchedule";
-import Featured from "../components/featured/Featured";
+import DashContacts from "../components/dash_contacts/DashContacts";
+//import Featured from "../components/featured/Featured";
 
 const Home = () => {
   return (
@@ -18,7 +19,7 @@ const Home = () => {
         <div className="charts">
           <DailySchedule />
           <ToDoList />
-          <Featured />
+          <DashContacts />
         </div>
       </div>
     </div>

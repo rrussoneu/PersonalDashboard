@@ -8,6 +8,7 @@ import { LocalizationProvider } from "@mui/x-date-pickers";
 import { AdapterDayjs } from "@mui/x-date-pickers/AdapterDayjs";
 import Register from "./components/pages/Register";
 import { Navigate } from "react-router-dom";
+import LoginRegister from "./components/pages/LoginRegister";
 
 function App() {
   const isLoggedIn = () => {
@@ -21,11 +22,11 @@ function App() {
           <Routes>
             <Route
               path="/"
-              element={isLoggedIn() ? <Navigate to="/main/home" /> : <Login />}
+              element={isLoggedIn() ? <Navigate to="/main/home" /> : <LoginRegister />}
             />
             <Route
               path="login"
-              element={isLoggedIn() ? <Navigate to="/main/home" /> : <Login />}
+              element={isLoggedIn() ? <Navigate to="/main/home" /> : <LoginRegister />}
             />
             <Route path="register" element={<Register />} />
             <Route element={<RequireAuth />}>

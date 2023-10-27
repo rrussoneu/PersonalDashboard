@@ -70,7 +70,11 @@ function WeekEventCard(props) {
       }}
     >
       <div className="eventDataWrapper">
-        <span className="eventData">{title}</span>
+        <span className="eventData">
+          {startTime}-{endTime}
+          <br/>
+          {title}
+        </span>
       </div>
     </div>
   );

@@ -18,7 +18,7 @@ function TimeBar(props) {
   const getMarginTop = (currentTime) => {
     const hour = currentTime.hour();
     const mins = currentTime.minute();
-    const daypx = hour * 60 + mins - 2;
+    const daypx = hour * 60.5 + mins - 2;
     return daypx;
   };
 

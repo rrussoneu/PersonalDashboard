@@ -10,8 +10,8 @@ function TimeBar(props) {
   // update the time bar every two minutes
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentTime(dayjs);
-    }, 120000);
+      setCurrentTime(dayjs());
+    }, 6000);
     return () => clearInterval(interval);
   }, []);
 
@@ -29,12 +29,15 @@ function TimeBar(props) {
     return strVer;
   };
 
+  const isCurrentWeek = dayjs().isSame(props.currWeek, "week");
+  const displayTimeBar = isCurrentWeek ? "flex" : "none";
+
   return (
     <div
       ref={props.innerRef}
       className="timeBar"
       style={{
-        display: props.innerDisplay,
+        display: displayTimeBar,
         marginTop: getMarginTop(currentTime),
         marginLeft: getMarginLeft(currentTime),
       }}

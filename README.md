@@ -23,7 +23,7 @@ This web application functions as a personal dashboard for users to streamline t
 
 - **Google Calendar Integration**: Users will have the option in the future to link the app to their Google Calendar, providing seamless updates across platforms
 
-- **Calendar Improvement**: There are currently some minor variations of a few pixels with event display, and there is room for improvement with exact event placement
+- **Calendar Improvement**: There are currently some minor variations of a few pixels with event and time-bar display, and there is room for improvement with exact placement
 
 ## Getting Started
 

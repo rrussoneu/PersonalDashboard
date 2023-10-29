@@ -16,6 +16,7 @@ function WeekCalendar() {
   const [currWeekEvents, setCurrWeekEvents] = useState([]);
   const barRef = useRef();
   const [displayBar, setDisplayBar] = useState("flex");
+  const [currWeek, setCurrWeek] = useState(dayjs());
 
   const hourSlot = [
     "12:00",
@@ -102,13 +103,14 @@ function WeekCalendar() {
       }
     }
     setWeekDayObjs(newDays);
-    //console.log(weekDayObjs);
   }, [currDay[0]]);
 
   useEffect(() => {
     handleEvents();
+    setCurrWeek(weekDayObjs[0]);
   }, [weekDayObjs]);
 
+  //console.log(currDay)
   return (
     <div className="weekCalendarWrapper">
       <div className="weekCalendarHeader">
@@ -149,7 +151,11 @@ function WeekCalendar() {
               <WeekEventCard key={idx} eventObject={dayEvent} />
             ))
           )}
-          <TimeBar innerRef={barRef} innerDisplay={displayBar} />
+          <TimeBar
+            innerRef={barRef}
+            innerDisplay={displayBar}
+            currWeek={currWeek}
+          />
         </div>
       </div>
     </div>

@@ -54,11 +54,11 @@ class EventViewSet(viewsets.ModelViewSet):
         owner = self.request.query_params.get('owner')
         dates = self.request.query_params.getlist('dates[]')
 
-        if dates:
+        #if dates:
             #parsed_dates = [datetime.strptime(date, '%Y-%m%d').date() for date in dates]
-            queryset = queryset.filter(date__in=dates)      
-        elif date:
-            queryset = queryset.filter(date=date)
+            #queryset = queryset.filter(date__in=dates)      
+        #elif date:
+            #queryset = queryset.filter(date=date)
         if owner:
             queryset = queryset.filter(owner=owner)
 

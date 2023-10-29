@@ -21,7 +21,7 @@ function WeekEventCard(props) {
     const mins = parseInt(startTime.slice(3, 5));
     // console.log("Minute card" + mins);
     // Minute9
-    const daypx = hour * 60 + mins;
+    const daypx = hour * 60.5 + mins;
     //console.log("daypx");
 
     //console.log(daypx);
@@ -50,7 +50,7 @@ function WeekEventCard(props) {
     //console.log("Curr day is " + dayOfWeek);
     // Curr day is 6
     const newMarginLeft = dayOfWeek * 12.5 + 12.5;
-    const strVer = newMarginLeft.toString() + '%';
+    const strVer = newMarginLeft.toString() + "%";
     return strVer;
   };
 
@@ -70,7 +70,11 @@ function WeekEventCard(props) {
       }}
     >
       <div className="eventDataWrapper">
-        <span className="eventData">{title}</span>
+        <span className="eventData">
+          {startTime}-{endTime}
+          <br/>
+          {title}
+        </span>
       </div>
     </div>
   );

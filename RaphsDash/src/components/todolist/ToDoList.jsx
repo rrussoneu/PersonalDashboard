@@ -42,10 +42,10 @@ function ToDoList() {
         },
         params: {
           owner: localStorage.getItem("userId"),
-          date: dayjs().format("YYYY-MM-DD"),
+          //date: dayjs().format("YYYY-MM-DD"),
         },
       }).then((response) => {
-        console.log(response.data)
+        console.log(response.data);
         setAllToDos(response.data);
         setIsLoading(false);
       });

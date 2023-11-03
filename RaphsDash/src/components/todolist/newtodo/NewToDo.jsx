@@ -36,7 +36,7 @@ function NewToDo() {
       //need value attrib on inputs for this
       setTitle("");
       setNotes("");
-      window.location.reload();
+      window.location.reload(); // put to do in context and update there
     } catch (err) {
       if (!err?.response) {
         console.log(err);

@@ -60,7 +60,7 @@ function CreateEvent(props) {
           },
         }
       );
-      window.location.reload();
+      window.location.reload(); // put events in context and update there instead of reload
     } catch (err) {
       console.log(err);
     }

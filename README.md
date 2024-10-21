@@ -8,9 +8,15 @@ This web application functions as a personal dashboard for users to streamline t
 
 - **Custom Built Calendar**: While many apps use an external calendar library, this project uses a custom-built calendar using JSX and CSS. The calendar displays events and their times and includes a time-bar to indicate the current day and time.
 
+<img src="res/dashboard_calendar.png" width="500px" height="300px">
+
 - **Contact Management**: All contacts can be managed in one place, storing names, emails, and phone numbers.
 
+<img src="res/dashboard_contacts.png" width="500px" height="300px">
+
 - **To-Do List**: An integrated to-do list lets users plan and prioritze day to day tasks
+
+<img src="res/dashboard_dashboard.png" width="500px" height="300px">
 
 ## Tech Stack
 
